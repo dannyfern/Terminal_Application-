@@ -1,6 +1,7 @@
 class Deck
     def initialize
-    @deck = [2,3,4,5,6,7,8,9,10,10,10,10,11,
+    @suit = ['clubs', 'spades', 'hearts', 'diamonds']
+    @deck =[2,3,4,5,6,7,8,9,10,10,10,10,11,
             2,3,4,5,6,7,8,9,10,10,10,10,11,
             2,3,4,5,6,7,8,9,10,10,10,10,11,
             2,3,4,5,6,7,8,9,10,10,10,10,11,
@@ -8,13 +9,16 @@ class Deck
             2,3,4,5,6,7,8,9,10,10,10,10,11,
             2,3,4,5,6,7,8,9,10,10,10,10,11,
             2,3,4,5,6,7,8,9,10,10,10,10,11,]
-            puts "your card is #{get_random_card}"
+            puts "your card is #{deal}"
+            
+    
             
     end
 end
 
-def get_random_card
-    @deck[rand(@deck.length)]
+def deal
+    @deck[rand(@deck.length)] 
+    # @suit[rand(@suit.length)]
 end 
     
 Deck.new
