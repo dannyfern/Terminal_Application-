@@ -18,7 +18,7 @@ def print_game_state
 end
 
 def run_game
-    while @still_playing
+    while @still_playing == true
         print_game_state
         option1 = gets.chomp.downcase
     if option1 == "hit"
@@ -31,8 +31,7 @@ def run_game
     
     player_rules
     house_rules
-    
-
+  
     end
 end
 
@@ -40,6 +39,10 @@ def player_rules
     if get_hand_value(@player_hand) > 21 
         print "YOU BUSTED HOUSE WINS"
     return end_game
+    while get_hand_value(@player_hand) == 21
+        print "BLACKJACK BABY"
+    return end_game
+    end
     end 
 end 
 
@@ -51,6 +54,10 @@ def house_rules
         if get_hand_value(@dealer_hand) > 21
         print "HOUSE BUSTS YOU WIN"
         return end_game
+        if get_hand_value(@player_hand) > get_hand_value(@dealer_hand)
+        print "PLAYER WINS HOUSE LOSES"
+        return end_game
+        end
         end
     end
 end 
