@@ -97,30 +97,3 @@ end
 
 
 Deck.new
-
-
-
-
-
-
-
-
-
-
-# def get_hand
-#     deck_number = @deck[rand(@deck.length)] 
-#     suit_number = @suit[rand(@suit.length)]
-#     picture_number = @picture[rand(@picture.length)]
-#     if deck_number == 10
-#         return deck_number, suit_number, picture_number
-#     elsif deck_number == 11
-#         return deck_number, suit_number, 'Ace'
-#     else
-#         return deck_number, suit_number
-#     end
-# end 
-
-
-
-
-
