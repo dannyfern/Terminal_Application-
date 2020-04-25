@@ -57,6 +57,10 @@ def blackjack_rules
         puts "Sorry Sir, Your BUST! HOUSE WINS"
     elsif get_hand_value(@dealer_hand) > 21
         puts "CONGRATULATIONS HOUSE BUSTED YOU WIN"
+    elsif get_hand_value(@player_hand) == 21
+        puts "BLACKJACK BABY"
+    elsif get_hand_value(@dealer_hand) == 21
+        puts "BLACKJACK FOR THE HOUSE"
     end
 
     if get_hand_value(@player_hand) == get_hand_value(@dealer_hand)
