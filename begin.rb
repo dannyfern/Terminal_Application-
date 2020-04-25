@@ -1,23 +1,36 @@
-require "tty-prompt"
-require_relative "Test"
+require 'artii'
+require 'colorize'
+require 'tty-prompt'
+require_relative "blackjack"
+
+def welcome
+    a = Artii::Base.new
+puts a.asciify("Binging").colorize(:magenta)
+
+a = Artii::Base.new
+puts a.asciify("With").colorize(:magenta)
+
+a = Artii::Base.new
+puts a.asciify("Blackjack").colorize(:magenta)
+
+
+puts "Press ENTER to continue!".colorize(:red)
+input = gets.chomp
+while input == "enter"
+    break
+end 
+
+end
+
+puts welcome
 
 prompt = TTY::Prompt.new
-
-welcome = prompt.select("Choose your destiny?", %w(BlackJackQuickGame HELP! Exit))# =>
-
-welcome = gets.chomp 
-
-blackjack_alive = true 
-
-while blackjack_alive
-def main_menu 
-    if welcome == "BlackJackQuickGame"
-    load './Test.rb'
-    elsif welcome == "Exit"
-    blackjack_alive = false
-    else welcome == HELP!
-    load '.Test.rb'
-    
+prompt.select('Choose your Destiny') do |menu|
+    menu.default 3
+    menu.choice 'Play Blackjack', 1
+    menu.choice 'HELP!', 2
+    menu.choice 'Quit', 3
+    end
 end 
 
 
