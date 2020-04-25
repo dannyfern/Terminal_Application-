@@ -1,8 +1,6 @@
 require "tty-prompt"
 require_relative 'begin'
 
-@prompt = TTY::Prompt.new 
-
 class Deck
     def initialize
     @still_playing = true

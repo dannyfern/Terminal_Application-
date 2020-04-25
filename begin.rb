@@ -24,18 +24,24 @@ end
 
 puts welcome
 
-prompt = TTY::Prompt.new
-prompt.select('Choose your Destiny') do |menu|
-    menu.default 3
-    menu.choice 'Play Blackjack', 1
-    menu.choice 'HELP!', 2
-    menu.choice 'Quit', 3
-    end
+
+def main_menu
+    prompt = TTY::Prompt.new(enable_color: true)
+    menu_choice = prompt.select('-------------------------Choose your Destiny-----------------------') do |menu|
+            menu.default 3
+            menu.choice 'Play Blackjack' => 1
+            menu.choice 'HELP!' => 2
+            menu.choice 'Quit' => 3
+
+                menu_choice = gets.chomp.to_i
+
+                if menu == 1
+                    print "hello there"
+                end
+    end 
 end 
-
-
-
-
+        
+puts main_menu
 
 
 
