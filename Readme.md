@@ -93,5 +93,6 @@ The Target Audience for the game is anyone interested in Blackjack, either learn
 ![](Images/Flowchart.png)
 
 
-## Game Testing
+## Game Testing & Project Management
 ![](Images/table.JPG)
+![](Images/pj.JPG)
