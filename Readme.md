@@ -94,4 +94,4 @@ The Target Audience for the game is anyone interested in Blackjack, either learn
 
 
 ## Game Testing
-![](Images/table.jpg)
+![](Images/table.JPG)
