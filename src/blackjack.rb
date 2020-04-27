@@ -1,12 +1,9 @@
 require 'artii'
 require 'colorize'
 require 'tty-prompt'
-require_relative "blackjack"
 require 'colorize'
-require_relative "begin"
 
-puts welcome
-puts main_menu
+
 
 class Deck
     def initialize
@@ -24,7 +21,6 @@ end
 def print_game_state
     puts "Players hand is #{@player_hand} Value: #{get_hand_value(@player_hand)}".colorize(:light_blue)
     puts "Dealer hand is #{@dealer_hand} Value:  #{get_hand_value(@dealer_hand)}".colorize(:light_blue)
-    
 end
 
 def run_game
@@ -109,6 +105,6 @@ def get_random_card
 end
 
 
-Deck.new
+# Deck.new
 
-exit
+# exit
