@@ -17,12 +17,12 @@ class Deck
     run_game
     end
 end
-
+#This method will check the players and dealers hand and add the values to output to the user so they can decide to hit or stand. 
 def print_game_state
     puts "Players hand is #{@player_hand} Value: #{get_hand_value(@player_hand)}".colorize(:light_blue)
     puts "Dealer hand is #{@dealer_hand} Value:  #{get_hand_value(@dealer_hand)}".colorize(:light_blue)
 end
-
+#This method runs the initial game and asks for user input to hit or stand whilst printing the above method for logic sake.
 def run_game
    user_input = false
     while user_input != 'stand'
@@ -45,7 +45,7 @@ def run_game
     house_rules
     blackjack_rules
 end
-
+#This method is what is defined as, house rules for the dealer if they have to hit or stand based on the value. 
 def house_rules
     while get_hand_value(@dealer_hand) < 17
         puts "HOUSE HITS".colorize(:red)
@@ -54,7 +54,7 @@ def house_rules
         return
     end 
 end 
-
+#These are conditional rules based on the value and rules of blackjack all centred around 21. 
 def blackjack_rules
     if get_hand_value(@player_hand) > 21
         puts "Sorry Sir, Your BUST! THE HOUSE WINS".colorize(:red)
