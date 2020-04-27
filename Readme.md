@@ -96,3 +96,6 @@ The Target Audience for the game is anyone interested in Blackjack, either learn
 ## Game Testing & Project Management
 ![](Images/table.JPG)
 ![](Images/pj.JPG)
+
+## Link to Trello
+https://trello.com/b/Sj3JYlrR/terminal-project
