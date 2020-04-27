@@ -8,7 +8,6 @@ require_relative "begin"
 puts welcome
 puts main_menu
 
-
 class Deck
     def initialize
     @still_playing = true
@@ -112,3 +111,4 @@ end
 
 Deck.new
 
+exit

@@ -2,6 +2,9 @@ require 'artii'
 require 'colorize'
 require 'tty-prompt'
 require_relative "blackjack"
+require_relative 'help'
+
+@prompt = TTY::Prompt.new
 
 def welcome
     a = Artii::Base.new
@@ -21,23 +24,23 @@ while input == "enter"
 end 
 end
 
-
 def main_menu
-    prompt = TTY::Prompt.new(enable_color: true)
-    menu_choice = prompt.select('-------------------------Choose your Destiny-----------------------') do |menu|
+            menu_choice = @prompt.select('-------------------------Choose your Destiny-----------------------') do |menu|
             menu.default 3
-            menu.choice 'Play Blackjack' => 1
-            menu.choice 'HELP!' => 2
-            menu.choice 'Quit' => 3
-
-                menu_choice = gets.chomp.to_i
-
-                if menu_choice == 2
-                    puts help
-                end
-    end 
+            menu.choice 'Play Blackjack', 1
+            menu.choice 'HELP!', 2
+            menu.choice 'Quit', 3
+        end
 end 
-        
 
+case main_menu
+when 1
+    print "Starting Blackjack"
+    puts Deck.new 
+when 2
+    puts help 
+when 3
+    exit
+end 
 
-
+# hello world

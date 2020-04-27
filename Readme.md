@@ -91,3 +91,7 @@ The Target Audience for the game is anyone interested in Blackjack, either learn
 ## Control Flow 
 
 ![](Images/Flowchart.png)
+
+## Project Management 
+
+![](Images/pj.JPG)
